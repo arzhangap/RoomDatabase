@@ -6,8 +6,9 @@ import androidx.databinding.DataBindingUtil
 import com.example.roomdatabase.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        setContentView(R.layout.activity_main)
     }
 }

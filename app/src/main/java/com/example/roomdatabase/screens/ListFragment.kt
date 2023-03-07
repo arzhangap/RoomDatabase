@@ -9,7 +9,7 @@ import androidx.navigation.Navigation
 import com.example.roomdatabase.R
 import com.example.roomdatabase.databinding.FragmentListBinding
 
-class listFragment : Fragment() {
+class ListFragment : Fragment() {
 
     private var _binding: FragmentListBinding? = null
     val binding get() = _binding!!
@@ -22,7 +22,7 @@ class listFragment : Fragment() {
         val view = binding.root
 
         // set add click listener
-        binding.addDataButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_listFragment_to_addRowFragmentaf))
+        binding.addDataButton.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_listFragment_to_addRowFragment))
 
         // Inflate the layout for this fragment
         return view

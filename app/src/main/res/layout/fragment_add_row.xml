@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".screens.addRowFragment">
+    tools:context=".screens.AddRowFragment">
 
     <data>
 
@@ -30,6 +30,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextPersonAge"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="Name"
+                app:layout_constraintBottom_toTopOf="@+id/addButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPersonName" />
 
             <Button
                 android:id="@+id/addButton"
