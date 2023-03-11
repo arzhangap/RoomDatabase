@@ -29,16 +29,20 @@ class AddRowFragment : Fragment() {
 
         val view = binding.root
 
+        // get a refernce of the viewModel
         viewModel = ViewModelProvider(this)[(AddRowViewModel::class.java)]
 
+        //find navController
+        val navController = findNavController()
+
+        // Set up add to database button
         binding.addButton.setOnClickListener {
         val name = binding.editTextPersonName.text.toString()
         val age = binding.editTextPersonAge.text.toString()
             val person = Person(0,name, age)
             viewModel.insert(person)
-            Toast.makeText(requireContext(),"did it",Toast.LENGTH_LONG).show()
+            navController.navigateUp()
         }
-        val navController = findNavController()
         // Inflate the layout for this fragment
         return view
     }

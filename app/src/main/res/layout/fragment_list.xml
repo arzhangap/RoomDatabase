@@ -23,6 +23,11 @@
             android:focusable="true"
             android:src="@drawable/add_24" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/personList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
 
     </FrameLayout>
 </layout>
