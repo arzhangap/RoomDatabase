@@ -1,15 +1,17 @@
-package com.example.roomdatabase.screens
+package com.example.roomdatabase.screens.list
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
-import com.example.roomdatabase.Database.Person
+import androidx.recyclerview.widget.RecyclerView
 import com.example.roomdatabase.R
+import com.example.roomdatabase.model.Person
+
+
 // Use ListAdapter to use observable pattern.
 class PersonListAdapter() : ListAdapter<Person, PersonListAdapter.PersonViewHolder>(DiffCallback) {
     // make a DiffCallBack object to be aware of the changes
@@ -27,14 +29,20 @@ class PersonListAdapter() : ListAdapter<Person, PersonListAdapter.PersonViewHold
 
     // viewHolder for each row
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PersonViewHolder {
-        val viewHolder = PersonListAdapter.PersonViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent,false))
+        val viewHolder = PersonViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent,false))
         return viewHolder
     }
 
     // present the data in the holder
     // gets updated when submitList is called
     override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        val currentItem = getItem(position)
+        holder.bind(currentItem)
+
+        holder.itemView.setOnClickListener {
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     // create the viewHolder

@@ -6,15 +6,27 @@
     app:startDestination="@id/listFragment">
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.roomdatabase.screens.ListFragment"
+        android:name="com.example.roomdatabase.screens.list.ListFragment"
         android:label="ListFragment" >
         <action
             android:id="@+id/action_listFragment_to_addRowFragment"
             app:destination="@id/addRowFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
     </fragment>
     <fragment
         android:id="@+id/addRowFragment"
-        android:name="com.example.roomdatabase.screens.AddRowFragment"
+        android:name="com.example.roomdatabase.screens.add.AddRowFragment"
         android:label="fragment_add_row"
         tools:layout="@layout/fragment_add_row" />
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.roomdatabase.screens.update.UpdateFragment"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <argument
+            android:name="selectedPerson"
+            app:argType="com.example.roomdatabase.model.Person" />
+    </fragment>
 </navigation>

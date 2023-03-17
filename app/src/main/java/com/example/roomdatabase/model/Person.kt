@@ -1,10 +1,12 @@
-package com.example.roomdatabase.Database
+package com.example.roomdatabase.model
 
-import android.text.Editable
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @Entity(tableName = "person_table")
 data class Person(
     @PrimaryKey(autoGenerate = true)
@@ -13,4 +15,4 @@ data class Person(
     var name: String,
     @ColumnInfo(name="age")
     var age: String
-)
+) : Parcelable
