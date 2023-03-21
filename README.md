@@ -21,10 +21,7 @@ Project is created with:
 * NavigationUI
 
 ## Screenshot
-![1](https://user-images.githubusercontent.com/17007550/226192695-a8a6dc5e-5992-4856-82cb-899d37eb53e6.jpg)
-![2](https://user-images.githubusercontent.com/17007550/226192700-5599d6f1-a04a-40d9-b42b-2f8a2e75de31.jpg)
-![3](https://user-images.githubusercontent.com/17007550/226192703-77497dbe-b294-452f-a72b-ec34ee19b577.jpg)
-![5](https://user-images.githubusercontent.com/17007550/226192706-5f114255-61aa-4852-b44c-a2d385c32c48.jpg)
+<img src="https://user-images.githubusercontent.com/17007550/226192695-a8a6dc5e-5992-4856-82cb-899d37eb53e6.jpg" width=200><img src="https://user-images.githubusercontent.com/17007550/226192700-5599d6f1-a04a-40d9-b42b-2f8a2e75de31.jpg" width=200/><img src="https://user-images.githubusercontent.com/17007550/226192703-77497dbe-b294-452f-a72b-ec34ee19b577.jpg" width=200/><img src="https://user-images.githubusercontent.com/17007550/226192706-5f114255-61aa-4852-b44c-a2d385c32c48.jpg" width=200/>
 
 ## Setup
 File -> New -> Project From Version Control... -> Paste the Url. Good Luck
