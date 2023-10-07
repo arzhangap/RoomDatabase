@@ -21,4 +21,7 @@ interface PersonDao {
 
     @Query("SELECT * FROM person_table")
     fun getPersons() : Flow<List<Person>>
+
+    @Query("SELECT * FROM person_table WHERE name LIKE :searchQuery OR age LIKE :searchQuery")
+    fun search(searchQuery: String) : Flow<List<Person>>
 }

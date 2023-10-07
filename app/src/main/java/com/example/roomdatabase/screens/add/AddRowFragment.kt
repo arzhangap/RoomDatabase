@@ -1,37 +1,24 @@
 package com.example.roomdatabase.screens.add
 
+
 import android.os.Bundle
-import android.text.TextUtils
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.Lifecycle
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import com.example.roomdatabase.model.Person
-
-
 import com.example.roomdatabase.databinding.FragmentAddRowBinding
+import com.example.roomdatabase.model.Person
 import com.example.roomdatabase.viewmodel.AddRowViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-
-private lateinit var viewModel: AddRowViewModel
 
 class AddRowFragment : Fragment() {
 
     private var _binding: FragmentAddRowBinding? = null
     val binding get() = _binding!!
+
+    private lateinit var viewModel: AddRowViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -1,16 +1,10 @@
 package com.example.roomdatabase.viewmodel
 
 import android.app.Application
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.roomdatabase.model.Person
 import com.example.roomdatabase.Database.PersonDatabase
-import com.example.roomdatabase.R
+import com.example.roomdatabase.model.Person
 import com.example.roomdatabase.repository.PersonRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -29,6 +23,11 @@ class ListViewModel(application: Application) : AndroidViewModel(application)  {
         viewModelScope.launch(Dispatchers.IO) {
             personRepo.deleteAll()
         }
+    }
+
+    fun searchDatabase(query: String) : Flow<List<Person>> {
+        val searchQuery = "%$query%"
+        return personRepo.searchDatabase(searchQuery)
     }
 
 }

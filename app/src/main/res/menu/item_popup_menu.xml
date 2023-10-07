@@ -6,4 +6,11 @@
             android:title="DELETE"
             android:icon="@drawable/baseline_delete_24"
             app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/baseline_search_24"
+            android:title="SEATRCH"
+            android:visible="false"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
+            app:showAsAction="ifRoom"/>
 </menu>

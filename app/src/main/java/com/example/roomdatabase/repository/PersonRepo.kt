@@ -22,5 +22,9 @@ class PersonRepo(private val personDao: PersonDao) {
         personDao.deleteAll()
     }
 
+    fun searchDatabase(searchQuery: String) : Flow<List<Person>> {
+        return personDao.search(searchQuery)
+    }
+
     val readAllData: Flow<List<Person>> = personDao.getPersons()
 }
